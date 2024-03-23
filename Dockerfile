@@ -23,7 +23,7 @@ RUN buildDeps="\
         libpq-dev \
     " \
     && set -eux \
-    && apt-get update \
+    && apt-get -y update \
     && apt-get install --no-install-recommends --yes \
         libdbd-pg-perl \
         libdbi-perl \
