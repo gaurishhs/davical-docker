@@ -31,7 +31,8 @@ RUN buildDeps="\
         libyaml-perl \
         locales \
         postgresql-client \
-        php8.2-curl \
+        libcurl4 \
+        libcurl4-openssl-dev \
         ${buildDeps} \
     # configure locales
     && sed -i '/en_US.UTF-8/s/^# //g' /etc/locale.gen \
@@ -44,6 +45,7 @@ RUN buildDeps="\
         pgsql \
         pdo_pgsql \
         imap \
+        curl \
         calendar \
     # configure apache
     && a2enmod rewrite \
